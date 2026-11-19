@@ -30,13 +30,17 @@ Prototype de moteur de recommandation vidéo réalisé pendant mon stage de S7. 
 ## Organisation du dépôt
 
 ```
-version_complete/        Notebook principal (29 cellules, exécuté) + résultats + API
-version_pedagogique/     Même expérience, expliquée pas à pas (96 cellules, calculs à la main)
-notebooks/               Première exploration (baseline par popularité)
+Systeme_recommandation_video.ipynb   Notebook de travail : l'expérience expliquée pas à pas (96 cellules)
+LIRE_MOI.md                          Mode d'emploi détaillé du notebook et de l'API
+resultats/                           Sorties du notebook (tableaux CSV, manifeste, api_demo.py)
+docs/                                Documentation (comparaison des exécutions, rapport)
+donnees/                             Données KuaiRec, non versionnées (à télécharger)
+version_complete/                    Version condensée du même notebook (29 cellules) + résultats + API
+notebooks/                           Première exploration (baseline par popularité)
 requirements.txt
 ```
 
-Les deux versions donnent les mêmes résultats (voir `version_pedagogique/Comparaison_des_executions.md`).
+Le notebook de travail et la version condensée donnent les mêmes résultats (voir `docs/Comparaison_des_executions.md`).
 
 ## Lancer le projet
 
@@ -45,13 +49,12 @@ python -m pip install -r requirements.txt
 python -m jupyterlab
 ```
 
-Les notebooks sont enregistrés avec leurs sorties : on peut les lire sans rien exécuter. Pour refaire l'expérience, téléchargez KuaiRec 2.0, puis placez `small_matrix.csv` dans `data/` ou indiquez son chemin avec la variable d'environnement `RECO_CSV`.
+Les notebooks sont enregistrés avec leurs sorties : on peut les lire sans rien exécuter. Pour refaire l'expérience, téléchargez KuaiRec 2.0, puis placez `small_matrix.csv` et `item_categories.csv` dans `donnees/` et exécutez `Systeme_recommandation_video.ipynb` depuis la racine du dépôt. (La version condensée cherche le CSV dans `data/` ou à l'emplacement indiqué par la variable d'environnement `RECO_CSV`.)
 
-**API de démonstration** (une fois le notebook exécuté, ce qui génère `modele_demo.npz`) :
+**API de démonstration** (une fois le notebook exécuté, ce qui génère `resultats/modele_demo.npz`) :
 
 ```bash
-cd version_complete
-python resultats_recommandation/api_demo.py
+python resultats/api_demo.py
 ```
 
 Puis ouvrez `http://127.0.0.1:8000/recommendations?user_id=14&k=10`.

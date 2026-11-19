@@ -12,12 +12,14 @@ __pycache__/
 
 # Données et modèles (trop lourds ou régénérables par les notebooks)
 data/
+donnees/
 models/
 small_matrix.csv
 *.npz
 
 # Fichiers personnels et archives (hors projet)
 *.zip
+archives/
 *.xlsx
 *.pdf
 
