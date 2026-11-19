@@ -1,0 +1,56 @@
+{
+  "modele": "Hybride_0.25",
+  "collaboratif": "SVD_16",
+  "hybride": "Hybride_0.25",
+  "baseline_reference": "Taux_lisse",
+  "seed": 42,
+  "seuil": 0.8,
+  "k": 10,
+  "csv_sha256": "6b601cd38b2600d8734b4aede309ad73d1e201fdc4bd76d4bc7d2534793d7d15",
+  "versions": {
+    "python": "3.14.7",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "lignes": 4676570,
+  "utilisateurs": 1411,
+  "videos": 3327,
+  "split": "60/20/20 par utilisateur (approximatif, arrondis par groupe)",
+  "candidats_test": "interactions observees du test par utilisateur",
+  "exemple_connu": {
+    "user_id": 14,
+    "mode": "Hybride_0.25",
+    "video_ids": [
+      5464,
+      8366,
+      3344,
+      7594,
+      5995,
+      314,
+      5365,
+      4715,
+      1445,
+      9261
+    ],
+    "nombre_retourne": 10
+  },
+  "exemple_inconnu": {
+    "user_id": 7163,
+    "mode": "repli_popularite",
+    "video_ids": [
+      6222,
+      2130,
+      1305,
+      7383,
+      5464,
+      4040,
+      600,
+      9178,
+      8524,
+      8298
+    ],
+    "nombre_retourne": 10
+  }
+}
