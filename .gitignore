@@ -1,9 +1,25 @@
-﻿.venv/
+﻿# Environnements Python
+.venv/
 venv/
 __pycache__/
+*.pyc
 .ipynb_checkpoints/
 .env
-*.pyc
 
+# IDE
+.idea/
+.vscode/
+
+# Données et modèles (trop lourds ou régénérables par les notebooks)
 data/
 models/
+small_matrix.csv
+*.npz
+
+# Fichiers personnels et archives (hors projet)
+*.zip
+*.xlsx
+*.pdf
+
+# Ancienne copie de travail, remplacée par version_complete/
+Projet_recommandation_video/
